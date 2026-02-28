@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reshma | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      font-family:'Poppins', sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#020617;
+      color:white;
+      padding-top:70px;
+    }
+
+    /* SECTION SPACING */
+    section{
+      padding:130px 0;
+    }
+
+    /* NAVBAR */
+    .navbar{
+      background:rgba(2,6,23,0.85);
+      backdrop-filter:blur(10px);
+    }
+    .navbar-brand{
+      color:#00f2fe!important;
+      font-weight:700;
+    }
+    .nav-link{
+      color:white!important;
+      margin-left:15px;
+    }
+    .nav-link:hover{
+      color:#00f2fe!important;
+    }
+
+    /* HERO */
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:radial-gradient(circle at top,#0b2447,#020617);
+      text-align:center;
+      padding:20px;
+    }
+
+    .hero-card{
+      background:rgba(255,255,255,0.08);
+      backdrop-filter:blur(16px);
+      padding:50px 40px;
+      border-radius:22px;
+      box-shadow:0 25px 60px rgba(0,0,0,0.6);
+      animation:fadeUp 1s ease;
+    }
+
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(40px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+
+    .hero-card h1{
+      font-size:3rem;
+      font-weight:800;
+    }
+
+    .hero-card span{
+      color:#00f2fe;
+      text-shadow:0 0 15px #00f2fe;
+    }
+
+    .hero-card h3{
+      color:#ffd700;
+      margin-bottom:10px;
+    }
+
+    .hero-btn{
+      background:linear-gradient(90deg,#00f2fe,#4facfe);
+      color:black;
+      border:none;
+      padding:12px 26px;
+      border-radius:30px;
+      font-weight:600;
+      box-shadow:0 0 25px #00f2fe;
+    }
+
+    /* SECTION TITLE */
+    .section-title{
+      font-size:2.4rem;
+      font-weight:700;
+      margin-bottom:50px;
+    }
+
+    .section-title span{
+      color:#00f2fe;
+      text-shadow:0 0 15px #00f2fe;
+    }
+
+    /* PROJECTS & SKILLS */
+    .projects-section{
+      background:radial-gradient(circle at top,#0b2447,#020617);
+    }
+
+    .projects-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:30px;
+      margin-top:40px;
+    }
+
+    .project-card{
+      background:rgba(255,255,255,0.08);
+      backdrop-filter:blur(14px);
+      padding:30px 25px;
+      border-radius:20px;
+      box-shadow:0 20px 50px rgba(0,0,0,0.5);
+      transition:0.4s;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .project-card::before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:linear-gradient(120deg,#00f2fe,#4facfe);
+      opacity:0;
+      transition:0.4s;
+    }
+
+    .project-card:hover::before{
+      opacity:0.15;
+    }
+
+    .project-card:hover{
+      transform:translateY(-12px);
+      box-shadow:0 0 40px rgba(0,242,254,0.8);
+    }
+
+    .project-card h4{
+      color:#00f2fe;
+      margin-bottom:10px;
+    }
+
+    .project-card p{
+      color:#e5e7eb;
+      font-size:0.95rem;
+    }
+
+    /* CONTACT */
+    .contact-section{
+      background:radial-gradient(circle at top,#0b2447,#020617);
+      padding-bottom:180px;
+    }
+
+    .contact-card{
+      max-width:420px;
+      margin:auto;
+      background:rgba(255,255,255,0.08);
+      backdrop-filter:blur(16px);
+      padding:35px 30px;
+      border-radius:20px;
+      box-shadow:0 25px 60px rgba(0,0,0,0.6);
+    }
+
+    .contact-card input,
+    .contact-card textarea{
+      width:100%;
+      margin-bottom:14px;
+      padding:10px 12px;
+      border-radius:10px;
+      border:none;
+    }
+
+    .submit-btn{
+      width:100%;
+      padding:12px;
+      border-radius:30px;
+      font-weight:700;
+      background:linear-gradient(90deg,#00f2fe,#4facfe);
+      border:none;
+      color:black;
+    }
+
+    .success-msg{
+      display:none;
+      text-align:center;
+      margin-top:15px;
+      color:#22c55e;
+      font-weight:600;
+    }
+
+    @media(max-width:768px){
+      .hero-card h1{font-size:2.3rem;}
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Reshma</a>
+    <button class="navbar-toggler bg-light" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="hero">
+  <div class="hero-card">
+    <h1>Hi, I'm <span>Reshma</span></h1>
+    <h3>Frontend Developer</h3>
+    <p>Creating modern, responsive & impactful web experiences</p>
+
+    <div class="mt-4 d-flex justify-content-center gap-3 flex-wrap">
+       <a href="#skills" class="btn hero-btn">My Skills</a>
+      <a href="#projects" class="btn hero-btn">View Projects</a>
+      <a href="#contact" class="btn hero-btn">Contact Me</a>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="projects-section">
+  <div class="container text-center">
+    <h2 class="section-title">My <span>Skills</span></h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h4>HTML</h4>
+        <p>Semantic structure, SEO, accessibility</p>
+      </div>
+      <div class="project-card">
+        <h4>CSS</h4>
+        <p>Flexbox, Grid, animations, responsive design</p>
+      </div>
+      <div class="project-card">
+        <h4>Bootstrap</h4>
+        <p>Grid system, UI components, fast layouts</p>
+      </div>
+      <div class="project-card">
+        <h4>Python</h4>
+        <p>Logic building, automation, backend basics</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects-section">
+  <div class="container text-center">
+    <h2 class="section-title">My <span>Projects</span></h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h4>Farm Product Marketplace</h4>
+        <p>Direct farmer-to-buyer platform with secure orders.</p>
+      </div>
+      <div class="project-card">
+        <h4>Farmer Ai Assistant</h4>
+        <p>AI-based guidance helping farmers with crop scems and pest control and  whether related data .</p>
+      </div>
+      <div class="project-card">
+        <h4>Mental Health Chatbot</h4>
+        <p>AI chatbot for emotional support and guidance.</p>
+    </div>
+    <div class="project-card">
+        <h4>Women work using Ai</h4>
+        <p>AI-based platform to support rural women in their work and livelihoods.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="contact-card">
+    <h2 class="text-center">Contact <span style="color:#00f2fe;">Me</span></h2>
+    <p class="text-center">Let's work together</p>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="3" placeholder="Your Message" required></textarea>
+      <button type="submit" class="submit-btn">Send Message</button>
+      <div class="success-msg" id="successMsg">✅ Message sent successfully!</div>
+    </form>
+  </div>
+</section>
+
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    document.getElementById("successMsg").style.display="block";
+    this.reset();
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
