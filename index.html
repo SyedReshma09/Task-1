@@ -23,7 +23,7 @@
       padding-top:70px;
     }
 
-    /* SECTION SPACING */
+    /* SECTION SPACING */ 
     section{
       padding:130px 0;
     }
@@ -245,7 +245,7 @@
 <!-- SKILLS -->
 <section id="skills" class="projects-section">
   <div class="container text-center">
-    <h2 class="section-title">My <span>Skills</span></h2>
+    <h2 class="section-title"><span>Skills</span></h2>
     <div class="projects-grid">
       <div class="project-card">
         <h4>HTML</h4>
@@ -270,7 +270,7 @@
 <!-- PROJECTS -->
 <section id="projects" class="projects-section">
   <div class="container text-center">
-    <h2 class="section-title">My <span>Projects</span></h2>
+    <h2 class="section-title"><span>Projects</span></h2>
     <div class="projects-grid">
       <div class="project-card">
         <h4>Farm Product Marketplace</h4>
@@ -294,15 +294,15 @@
 <!-- CONTACT -->
 <section id="contact" class="contact-section">
   <div class="contact-card">
-    <h2 class="text-center">Contact <span style="color:#00f2fe;">Me</span></h2>
-    <p class="text-center">Let's work together</p>
-    <form id="contactForm">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="3" placeholder="Your Message" required></textarea>
+    <h2 class="text-center"><span style="color:#00f2fe;"> Contact Me</span></h2>
+  
+    <form action="https://formsubmit.co/reshmasyed980@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="3" placeholder="Your Message" required></textarea>
       <button type="submit" class="submit-btn">Send Message</button>
-      <div class="success-msg" id="successMsg">✅ Message sent successfully!</div>
     </form>
+    <div id="successMsg" class="success-msg">Your message has been sent successfully!</div>
   </div>
 </section>
 
