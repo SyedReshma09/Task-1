@@ -1,210 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Reshma | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>RESHMA | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    *{
-      font-family:'Poppins', sans-serif;
-      scroll-behavior:smooth;
-    }
+<style>
+*{
+  font-family:'Poppins', sans-serif;
+  scroll-behavior:smooth;
+}
 
-    body{
-      background:#020617;
-      color:white;
-      padding-top:70px;
-    }
+body{
+  background:#2e2405;
+  color:white;
+  padding-top:70px;
+}
 
-    /* SECTION SPACING */ 
-    section{
-      padding:130px 0;
-    }
+/* NAVBAR */
+.navbar{
+  background:rgba(5,11,46,0.9);
+  backdrop-filter:blur(10px);
+}
+.navbar-brand{
+  color:#00f2fe!important;
+  font-weight:700;
+}
+.nav-link{
+  color:white!important;
+  margin-left:15px;
+}
+.nav-link:hover{
+  color:#00f2fe!important;
+}
 
-    /* NAVBAR */
-    .navbar{
-      background:rgba(2,6,23,0.85);
-      backdrop-filter:blur(10px);
-    }
-    .navbar-brand{
-      color:#00f2fe!important;
-      font-weight:700;
-    }
-    .nav-link{
-      color:white!important;
-      margin-left:15px;
-    }
-    .nav-link:hover{
-      color:#00f2fe!important;
-    }
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:radial-gradient(circle at top,#0b2447,#050b2e);
+  text-align:center;
+  padding:20px;
+}
+.hero-card{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(16px);
+  padding:50px 40px;
+  border-radius:22px;
+  box-shadow:0 25px 60px rgba(0,0,0,0.6);
+}
 
-    /* HERO */
-    .hero{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:radial-gradient(circle at top,#0b2447,#020617);
-      text-align:center;
-      padding:20px;
-    }
+.hero-card h1{
+  font-size:3rem;
+  font-weight:800;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:15px;
+}
+.hero-card h1 img{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  border:2px solid #00f2fe;
+  box-shadow:0 0 20px #00f2fe;
+}
 
-    .hero-card{
-      background:rgba(255,255,255,0.08);
-      backdrop-filter:blur(16px);
-      padding:50px 40px;
-      border-radius:22px;
-      box-shadow:0 25px 60px rgba(0,0,0,0.6);
-      animation:fadeUp 1s ease;
-    }
+.hero-card span{
+  color:#00f2fe;
+}
+.hero-card h3{
+  color:#ffd700;
+  margin-bottom:10px;
+}
+.hero-btn{
+  background:linear-gradient(90deg,#00f2fe,#4facfe);
+  color:black;
+  border:none;
+  padding:12px 26px;
+  border-radius:30px;
+  font-weight:600;
+}
 
-    @keyframes fadeUp{
-      from{opacity:0;transform:translateY(40px);}
-      to{opacity:1;transform:translateY(0);}
-    }
+/* SECTION TITLES */
+.section-title{
+  font-size:2.4rem;
+  font-weight:700;
+  margin-bottom:50px;
+}
+.section-title span{
+  color:#00f2fe;
+}
 
-    .hero-card h1{
-      font-size:3rem;
-      font-weight:800;
-    }
+/* PROJECTS & SKILLS */
+.projects-section{
+  background:radial-gradient(circle at top,#0b2447,#050b2e);
+  padding:60px 20px;
+}
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:40px; /* more space between cards */
+}
+.project-card{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(14px);
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.5);
+  transition:0.4s;
+  cursor:pointer;
+  text-align:center;
+}
+.project-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 35px rgba(0,242,254,0.8);
+}
+.project-card h4{
+  color:#00f2fe;
+}
 
-    .hero-card span{
-      color:#00f2fe;
-      text-shadow:0 0 15px #00f2fe;
-    }
+/* CERTIFICATE IMAGE */
+.certificate-img{
+  width:100%;
+  height:200px; /* taller for better visibility */
+  object-fit:cover;
+  border-radius:14px;
+  margin-bottom:15px;
+  transition:0.4s;
+}
+.project-card:hover img{
+  transform:scale(1.05);
+}
 
-    .hero-card h3{
-      color:#ffd700;
-      margin-bottom:10px;
-    }
+/* CONTACT */
+.contact-section{
+  background:radial-gradient(circle at top,#0b2447,#050b2e);
+  padding:100px 20px 200px; /* more space at bottom */
+}
+.contact-card{
+  max-width:420px;
+  margin:auto;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(16px);
+  padding:35px;
+  border-radius:20px;
+}
+.contact-card input,
+.contact-card textarea{
+  width:100%;
+  margin-bottom:14px;
+  padding:10px;
+  border-radius:10px;
+  border:none;
+}
+.submit-btn{
+  width:100%;
+  padding:12px;
+  border-radius:30px;
+  font-weight:700;
+  background:linear-gradient(90deg,#00f2fe,#4facfe);
+  border:none;
+}
+.success-msg{
+  display:none;
+  text-align:center;
+  margin-top:10px;
+  color:#22c55e;
+}
 
-    .hero-btn{
-      background:linear-gradient(90deg,#00f2fe,#4facfe);
-      color:black;
-      border:none;
-      padding:12px 26px;
-      border-radius:30px;
-      font-weight:600;
-      box-shadow:0 0 25px #00f2fe;
-    }
-
-    /* SECTION TITLE */
-    .section-title{
-      font-size:2.4rem;
-      font-weight:700;
-      margin-bottom:50px;
-    }
-
-    .section-title span{
-      color:#00f2fe;
-      text-shadow:0 0 15px #00f2fe;
-    }
-
-    /* PROJECTS & SKILLS */
-    .projects-section{
-      background:radial-gradient(circle at top,#0b2447,#020617);
-    }
-
-    .projects-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:30px;
-      margin-top:40px;
-    }
-
-    .project-card{
-      background:rgba(255,255,255,0.08);
-      backdrop-filter:blur(14px);
-      padding:30px 25px;
-      border-radius:20px;
-      box-shadow:0 20px 50px rgba(0,0,0,0.5);
-      transition:0.4s;
-      position:relative;
-      overflow:hidden;
-    }
-
-    .project-card::before{
-      content:'';
-      position:absolute;
-      inset:0;
-      background:linear-gradient(120deg,#00f2fe,#4facfe);
-      opacity:0;
-      transition:0.4s;
-    }
-
-    .project-card:hover::before{
-      opacity:0.15;
-    }
-
-    .project-card:hover{
-      transform:translateY(-12px);
-      box-shadow:0 0 40px rgba(0,242,254,0.8);
-    }
-
-    .project-card h4{
-      color:#00f2fe;
-      margin-bottom:10px;
-    }
-
-    .project-card p{
-      color:#e5e7eb;
-      font-size:0.95rem;
-    }
-
-    /* CONTACT */
-    .contact-section{
-      background:radial-gradient(circle at top,#0b2447,#020617);
-      padding-bottom:180px;
-    }
-
-    .contact-card{
-      max-width:420px;
-      margin:auto;
-      background:rgba(255,255,255,0.08);
-      backdrop-filter:blur(16px);
-      padding:35px 30px;
-      border-radius:20px;
-      box-shadow:0 25px 60px rgba(0,0,0,0.6);
-    }
-
-    .contact-card input,
-    .contact-card textarea{
-      width:100%;
-      margin-bottom:14px;
-      padding:10px 12px;
-      border-radius:10px;
-      border:none;
-    }
-
-    .submit-btn{
-      width:100%;
-      padding:12px;
-      border-radius:30px;
-      font-weight:700;
-      background:linear-gradient(90deg,#00f2fe,#4facfe);
-      border:none;
-      color:black;
-    }
-
-    .success-msg{
-      display:none;
-      text-align:center;
-      margin-top:15px;
-      color:#22c55e;
-      font-weight:600;
-    }
-
-    @media(max-width:768px){
-      .hero-card h1{font-size:2.3rem;}
-    }
-  </style>
+@media(max-width:768px){
+  .hero-card h1{
+    flex-direction:column;
+    font-size:2.2rem;
+  }
+}
+</style>
 </head>
 
 <body>
@@ -212,15 +191,17 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="#">Reshma</a>
+    <a class="navbar-brand" href="#">RESHMA</a>
     <button class="navbar-toggler bg-light" data-bs-toggle="collapse" data-bs-target="#nav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="nav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills"> T-Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills"> NT-Skills</a></li>
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -230,14 +211,17 @@
 <!-- HOME -->
 <section id="home" class="hero">
   <div class="hero-card">
-    <h1>Hi, I'm <span>Reshma</span></h1>
-    <h3>Frontend Developer</h3>
+    <h1>
+      Hi, I'm <span>Reshma</span>
+    </h1>
+    <h3>Ai-Ml Student</h3>
     <p>Creating modern, responsive & impactful web experiences</p>
-
     <div class="mt-4 d-flex justify-content-center gap-3 flex-wrap">
-       <a href="#skills" class="btn hero-btn">My Skills</a>
-      <a href="#projects" class="btn hero-btn">View Projects</a>
-      <a href="#contact" class="btn hero-btn">Contact Me</a>
+      <a href="#skills" class="btn hero-btn"> T-Skills</a>
+      <a href="#skills" class="btn hero-btn"> NT-Skills</a>
+      <a href="#projects" class="btn hero-btn">Projects</a>
+      <a href="#certificates" class="btn hero-btn">Certificates</a>
+      <a href="#contact" class="btn hero-btn">Contact</a>
     </div>
   </div>
 </section>
@@ -245,24 +229,32 @@
 <!-- SKILLS -->
 <section id="skills" class="projects-section">
   <div class="container text-center">
-    <h2 class="section-title"><span>Skills</span></h2>
+    <h2 class="section-title"><span> T-Skills</span></h2>
     <div class="projects-grid">
-      <div class="project-card">
-        <h4>HTML</h4>
-        <p>Semantic structure, SEO, accessibility</p>
-      </div>
-      <div class="project-card">
-        <h4>CSS</h4>
-        <p>Flexbox, Grid, animations, responsive design</p>
-      </div>
-      <div class="project-card">
-        <h4>Bootstrap</h4>
-        <p>Grid system, UI components, fast layouts</p>
-      </div>
-      <div class="project-card">
-        <h4>Python</h4>
-        <p>Logic building, automation, backend basics</p>
-      </div>
+      <div class="project-card"><h4>HTML</h4><p>Semantic, SEO, Accessibility</p></div>
+      <div class="project-card"><h4>CSS</h4><p>Flexbox, Grid, Animations</p></div>
+      <div class="project-card"><h4>C Programming</h4><p>Logic, Data Structures</p></div>
+      <div class="project-card"><h4>JavaScript</h4><p>Logic, Automation</p></div>
+      <div class="project-card"><h4>Bootstrap</h4><p>Responsive UI Design</p></div>
+      <div class="project-card"><h4>Python</h4><p>Logic, Automation</p></div>
+      <div class="project-card"><h4>Power Bi</h4><p>Data Visualization & Analysis</p></div>
+      <div class="project-card"><h4>Mongadb</h4><p>Responsive Database Management</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="projects-section">
+  <div class="container text-center">
+    <h2 class="section-title"><span>  NT-Skills</span></h2>
+    <div class="projects-grid">
+      <div class="project-card"><h4>Communication</h4><p>Effective verbal and written communication</p></div>
+      <div class="project-card"><h4>Teamwork</h4><p>Collaboration and teamwork skills</p></div>
+      <div class="project-card"><h4>Leadership</h4><p>Leading teams and managing projects</p></div>
+      <div class="project-card"><h4>Problem Solving</h4><p>Critical thinking and analytical skills</p></div>
+      <div class="project-card"><h4>Time Management</h4><p>Efficiently managing tasks and deadlines</p></div>
+      <div class="project-card"><h4>Creativity</h4><p>Innovative thinking and creative solutions</p></div>
+      <div class="project-card"><h4>Adaptability</h4><p>Adjusting to new environments and challenges</p></div>
+      <div class="project-card"><h4>Emotional Intelligence</h4><p>Understanding and managing emotions effectively</p></div>
     </div>
   </div>
 </section>
@@ -291,6 +283,51 @@
   </div>
 </section>
 
+<!-- CERTIFICATES -->
+<section id="certificates" class="projects-section">
+  <div class="container text-center">
+    <h2 class="section-title"><span>Certificates</span></h2>
+    <div class="projects-grid">
+
+      <a href="cert1.jpeg" target="_blank" class="project-card">
+        <img src="cert1.jpeg" class="certificate-img" alt="Sales Force Certificate">
+        <h4>Sales Force</h4>
+      </a>
+
+      <a href="cert2.jpeg" target="_blank" class="project-card">
+        <img src="cert2.jpeg" class="certificate-img" alt="DAF Certificate">
+        <h4>DAF</h4>
+      </a>
+
+      <a href="cert3.jpeg" target="_blank" class="project-card">
+        <img src="cert3.jpeg" class="certificate-img" alt="NPTEL Certificate">
+        <h4>NPTEL</h4>
+      </a>
+
+      <a href="cert4.jpeg" target="_blank" class="project-card">
+        <img src="cert4.jpeg" class="certificate-img" alt="IBM Certificate">
+        <h4>IBM</h4>
+      </a>
+
+      <a href="cert5.jpeg" target="_blank" class="project-card">
+        <img src="cert5.jpeg" class="certificate-img" alt="Geeks for Geeks Certificate">
+        <h4>Geeks for Geeks</h4>
+      </a>
+
+      <a href="cert6.jpeg" target="_blank" class="project-card">
+        <img src="cert6.jpeg" class="certificate-img" alt="UiPath Certificate">
+        <h4>UiPath</h4>
+      </a>
+
+      <a href="cert7.jpeg" target="_blank" class="project-card">
+        <img src="cert7.jpeg" class="certificate-img" alt="Prompt Engineering Certificate">
+        <h4>Prompt Engineering</h4>
+      </a>
+
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact" class="contact-section">
   <div class="contact-card">
@@ -307,11 +344,11 @@
 </section>
 
 <script>
-  document.getElementById("contactForm").addEventListener("submit", function(e){
-    e.preventDefault();
-    document.getElementById("successMsg").style.display="block";
-    this.reset();
-  });
+document.getElementById("contactForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  document.getElementById("successMsg").style.display="block";
+  this.reset();
+});
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
